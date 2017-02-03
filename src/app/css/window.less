@@ -1,0 +1,86 @@
+
+.windowView2 {
+
+}
+
+.windowView {
+  background-color: #fff;
+  border: 1px solid #000;
+  position: absolute;
+  left: 300px;
+  width: 100%;
+}
+
+.windowTitleView {
+  display: flex;
+  align-items: center;
+  cursor: default;
+  height: 40px;
+  background-color: #aaaaaa;
+  padding: 0px 10px 0px 10px;
+  justify-content: space-between;
+}
+
+.windowMenu {
+  display: flex;
+}
+
+.windowItem (@icon: "") {
+  background-image: @icon;
+  background-size: 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px 0px 5px
+}
+
+//.windowMenu a{
+//  background-color: black;
+//}
+
+.windowClose {
+  .windowItem(url("../../img/close.png"));
+}
+
+.windowMinimize {
+  .windowItem(url("../../img/subtract.png"));
+}
+
+.windowMinimize:active {
+  .windowMinimize;
+  background-color: #3071A9
+}
+
+.windowMenu a:active{
+  color:yellow;
+  background-color: #000000;
+}
+
+.am-btn-secondary {
+  color: #fff;
+  background-color: #3bb4f2;
+  border-color: #3bb4f2;
+}
+
+.am-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: .5em 1em;
+  vertical-align: middle;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color .3s ease-out,border-color .3s ease-out;
+  transition: background-color .3s ease-out,border-color .3s ease-out;
+}

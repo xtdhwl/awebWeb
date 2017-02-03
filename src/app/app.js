@@ -1,6 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+//var css = require("./app.less");
+import less from './app.less';
 import Main from './Main'; // Our custom react component
 
 // Needed for onTouchTap

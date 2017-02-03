@@ -41,6 +41,10 @@ const config = {
         loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
+      {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader"
+      }
     ],
   },
 };

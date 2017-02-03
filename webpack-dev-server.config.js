@@ -20,7 +20,7 @@ const config = {
     port: 3000, // Port Number
     host: 'localhost', // Change to '0.0.0.0' for external facing server
   },
-  devtool: 'eval',
+  devtool: 'source-map',
   output: {
     path: buildPath, // Path of output file
     filename: 'app.js',
@@ -43,6 +43,21 @@ const config = {
         loaders: ['react-hot', 'babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
+      {
+        test: /\.less$/,
+        loaders: ['style', 'css', 'less']
+      },
+      // {
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   loaders: [
+      //     'file?hash=sha512&digest=hex&name=[hash].[ext]',
+      //     'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+      //   ]
+      // },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'url?limit=25000!img?progressive=true'
+      }
     ],
   },
 };
